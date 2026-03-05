@@ -2,7 +2,7 @@
  * Kirari Navbar — auto-hide on scroll down, show on scroll up
  * Also handles mobile menu and display settings panels
  */
-;(function () {
+; (function () {
   document.addEventListener('DOMContentLoaded', function () {
     const navbar = document.getElementById('navbar');
     let lastScrollY = window.scrollY;
@@ -82,8 +82,7 @@
       if (!searchOverlay || !searchPanel) return;
       searchOverlay.classList.remove('hidden');
       searchOverlay.classList.add('show');
-      searchPanel.classList.remove('translate-y-[-120%]');
-      searchPanel.classList.add('translate-y-0');
+      searchPanel.classList.remove('float-panel-closed');
       const input = document.getElementById('search-input-mobile');
       if (input) setTimeout(() => input.focus(), 100);
     }
@@ -91,8 +90,7 @@
       if (!searchOverlay || !searchPanel) return;
       searchOverlay.classList.add('hidden');
       searchOverlay.classList.remove('show');
-      searchPanel.classList.add('translate-y-[-120%]');
-      searchPanel.classList.remove('translate-y-0');
+      searchPanel.classList.add('float-panel-closed');
     }
 
     if (searchBtn) searchBtn.addEventListener('click', openSearch);
