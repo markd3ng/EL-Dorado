@@ -1,4 +1,4 @@
-baseURL = "https://example.com/"
+baseURL = "https://el-dorado-7okp.vercel.app/"
 languageCode = "en"
 title = "KIRARI"
 theme = ".."
