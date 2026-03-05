@@ -1,7 +1,7 @@
 baseURL = "https://example.com/"
 languageCode = "en"
 title = "KIRARI"
-theme = "kirari-hugo-theme"
+theme = ".."
 paginate = 5
 enableRobotsTXT = true
 
