@@ -5,6 +5,15 @@ theme = ".."
 paginate = 5
 enableRobotsTXT = true
 
+[outputFormats]
+  [outputFormats.llms]
+    mediaType = "text/plain"
+    baseName = "llms"
+    isPlainText = true
+
+[outputs]
+  home = ["HTML", "RSS", "llms"]
+
 [build]
   [build.buildStats]
     enable = true

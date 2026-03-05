@@ -1,0 +1,16 @@
+# {{ .Site.Title }}
+
+{{ with .Site.Params.description }}{{ . }}{{ end }}
+
+## All Posts
+
+{{ range where .Site.RegularPages "Section" "posts" }}
+### {{ .Title }}
+- URL: {{ .Permalink }}
+- Date: {{ .Date.Format "2006-01-02" }}
+{{- if .Description }}
+- Description: {{ .Description }}
+{{- end }}
+
+{{ .Summary | plainify | htmlUnescape | chomp }}
+{{ end }}
