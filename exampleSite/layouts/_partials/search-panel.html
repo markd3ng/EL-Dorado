@@ -1,9 +1,9 @@
 {{/* Kirari Search Panel (Mobile) */}}
 {{ if site.Params.search.enable | default true }}
-<div id="search-overlay" class="panel-overlay hidden" aria-hidden="true"></div>
-<div id="search-panel" class="slide-panel inset-x-4 top-24 rounded-[var(--radius-large)] translate-y-[-120%] mx-auto max-w-lg"
+<div id="search-overlay" class="panel-overlay hidden md:hidden" aria-hidden="true"></div>
+<div id="search-panel" class="slide-panel inset-x-4 top-24 rounded-[var(--radius-large)] translate-y-[-120%] mx-auto max-w-lg md:hidden"
   style="position: fixed;">
-  <div class="p-4 flex flex-col gap-3">
+  <div class="p-4 flex flex-col">
     {{/* Search input */}}
     <div class="relative">
       <input id="search-input-mobile" type="text"
@@ -17,7 +17,7 @@
       </span>
     </div>
     {{/* Search results container */}}
-    <div id="search-results-mobile" class="flex flex-col gap-1 max-h-64 overflow-y-auto">
+    <div id="search-results-mobile" class="flex flex-col gap-1 max-h-64 overflow-y-auto mt-3">
     </div>
   </div>
 </div>
