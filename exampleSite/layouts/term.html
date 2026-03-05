@@ -1,0 +1,27 @@
+{{ define "main" }}
+  {{/* Term header */}}
+  <div class="card-base onload-animation p-5 flex items-center gap-3">
+    <div class="w-1 h-6 rounded-full bg-[var(--primary)]"></div>
+    {{ if eq .Data.Plural "categories" }}
+      {{ partial "icon.html" (dict "name" "folder" "class" "w-5 h-5 text-75") }}
+    {{ else }}
+      {{ partial "icon.html" (dict "name" "tag" "class" "w-5 h-5 text-75") }}
+    {{ end }}
+    <h1 class="text-xl font-bold text-90">{{ .Title }}</h1>
+    <span class="text-sm text-50">({{ len .Pages }})</span>
+  </div>
+
+  {{/* Posts in this term */}}
+  {{ $paginator := .Paginate .Pages }}
+  {{ range $paginator.Pages }}
+    <div class="onload-animation">
+      {{ partial "post-card.html" . }}
+    </div>
+  {{ end }}
+
+  {{ if gt $paginator.TotalPages 1 }}
+    <div class="onload-animation">
+      {{ partial "pagination.html" $paginator }}
+    </div>
+  {{ end }}
+{{ end }}

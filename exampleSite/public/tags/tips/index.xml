@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tips on KIRARI</title>
+    <link>http://localhost:1313/tags/tips/</link>
+    <description>Recent content in Tips on KIRARI</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 05 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/tips/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo Tips and Tricks</title>
+      <link>http://localhost:1313/posts/hugo-tips/</link>
+      <pubDate>Fri, 05 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hugo-tips/</guid>
+      <description>&lt;p&gt;Hugo is one of the most popular static site generators. Here are some tips to help you get the most out of it.&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-use-page-bundles&#34;&gt;&#xA;  1. Use Page Bundles&#xA;  &lt;a href=&#34;#1-use-page-bundles&#34; class=&#34;heading-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Page bundles help you organize your content better:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;content/&#xA;└── posts/&#xA;    └── my-post/&#xA;        ├── index.md&#xA;        ├── image1.jpg&#xA;        └── image2.png&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;2-shortcodes&#34;&gt;&#xA;  2. Shortcodes&#xA;  &lt;a href=&#34;#2-shortcodes&#34; class=&#34;heading-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Create reusable content snippets with shortcodes:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-go-html-template&#34; data-lang=&#34;go-html-template&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;{{&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;note&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;warning&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;}}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;This is a warning message!&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;{{&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;note&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;}}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;3-data-files&#34;&gt;&#xA;  3. Data Files&#xA;  &lt;a href=&#34;#3-data-files&#34; class=&#34;heading-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Store structured data in &lt;code&gt;data/&lt;/code&gt; folder:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

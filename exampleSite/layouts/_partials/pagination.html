@@ -1,0 +1,51 @@
+{{/* Kirari Pagination */}}
+{{ $pag := . }}
+<nav class="card-base p-4 flex items-center justify-center gap-2" aria-label="Pagination">
+  {{/* Previous */}}
+  {{ if $pag.HasPrev }}
+    <a href="{{ $pag.Prev.URL }}" class="btn-regular px-3 py-1.5 rounded-lg text-sm no-underline"
+      aria-label="{{ i18n "prevPage" | default "Previous page" }}">
+      &laquo; {{ i18n "prev" | default "Prev" }}
+    </a>
+  {{ else }}
+    <span class="px-3 py-1.5 rounded-lg text-sm text-30 cursor-not-allowed">
+      &laquo; {{ i18n "prev" | default "Prev" }}
+    </span>
+  {{ end }}
+
+  {{/* Page numbers */}}
+  {{ $adjacents := 2 }}
+  {{ range $pag.Pagers }}
+    {{ $show := false }}
+    {{ if le (math.Abs (sub .PageNumber $pag.PageNumber)) $adjacents }}
+      {{ $show = true }}
+    {{ end }}
+    {{ if or (eq .PageNumber 1) (eq .PageNumber $pag.TotalPages) }}
+      {{ $show = true }}
+    {{ end }}
+
+    {{ if $show }}
+      {{ if eq .PageNumber $pag.PageNumber }}
+        <span class="w-9 h-9 flex items-center justify-center rounded-lg text-sm font-bold bg-[var(--primary)] text-white">
+          {{ .PageNumber }}
+        </span>
+      {{ else }}
+        <a href="{{ .URL }}" class="btn-regular w-9 h-9 rounded-lg text-sm no-underline">
+          {{ .PageNumber }}
+        </a>
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{/* Next */}}
+  {{ if $pag.HasNext }}
+    <a href="{{ $pag.Next.URL }}" class="btn-regular px-3 py-1.5 rounded-lg text-sm no-underline"
+      aria-label="{{ i18n "nextPage" | default "Next page" }}">
+      {{ i18n "next" | default "Next" }} &raquo;
+    </a>
+  {{ else }}
+    <span class="px-3 py-1.5 rounded-lg text-sm text-30 cursor-not-allowed">
+      {{ i18n "next" | default "Next" }} &raquo;
+    </span>
+  {{ end }}
+</nav>

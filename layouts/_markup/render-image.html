@@ -1,0 +1,8 @@
+<figure class="my-4">
+  <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" loading="lazy"
+    class="rounded-lg w-full"
+    {{ with .Title }}title="{{ . }}"{{ end }}>
+  {{ with .Text }}
+  <figcaption class="text-center text-sm text-50 mt-2">{{ . }}</figcaption>
+  {{ end }}
+</figure>

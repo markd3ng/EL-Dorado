@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Guide on KIRARI</title>
+    <link>http://localhost:1313/tags/guide/</link>
+    <description>Recent content in Guide on KIRARI</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 10 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/guide/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Markdown Style Guide</title>
+      <link>http://localhost:1313/posts/markdown-guide/</link>
+      <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/markdown-guide/</guid>
+      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in Kirari theme.&lt;/p&gt;&#xA;&lt;h2 id=&#34;headings&#34;&gt;&#xA;  Headings&#xA;  &lt;a href=&#34;#headings&#34; class=&#34;heading-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;The following HTML &lt;code&gt;&amp;lt;h2&amp;gt;&lt;/code&gt;—&lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; elements represent five levels of section headings.&lt;/p&gt;&#xA;&lt;h2 id=&#34;h2&#34;&gt;&#xA;  H2&#xA;  &lt;a href=&#34;#h2&#34; class=&#34;heading-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;h3&#34;&gt;&#xA;  H3&#xA;  &lt;a href=&#34;#h3&#34; class=&#34;heading-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;h4 id=&#34;h4&#34;&gt;&#xA;  H4&#xA;  &lt;a href=&#34;#h4&#34; class=&#34;heading-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h4&gt;&#xA;&lt;h5 id=&#34;h5&#34;&gt;&#xA;  H5&#xA;  &lt;a href=&#34;#h5&#34; class=&#34;heading-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h5&gt;&#xA;&lt;h6 id=&#34;h6&#34;&gt;&#xA;  H6&#xA;  &lt;a href=&#34;#h6&#34; class=&#34;heading-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h6&gt;&#xA;&lt;h2 id=&#34;paragraph&#34;&gt;&#xA;  Paragraph&#xA;  &lt;a href=&#34;#paragraph&#34; class=&#34;heading-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Xerum, currentlyque sapiente, currentlynt litam porrum., currentlyque sapiente, currentlynt litam porrum. Totam vel ad error sequi facere dolorem possimus.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

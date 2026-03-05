@@ -1,0 +1,93 @@
+{{ define "main" }}
+<article class="flex flex-col gap-4">
+  {{/* Post header card */}}
+  <div class="card-base onload-animation overflow-hidden">
+    {{/* Cover image */}}
+    {{ with .Params.image }}
+    <div class="w-full h-48 md:h-64 overflow-hidden">
+      <img src="{{ . | relURL }}" alt="{{ $.Title }}" class="w-full h-full object-cover">
+    </div>
+    {{ end }}
+
+    <div class="p-6 md:p-8 flex flex-col gap-4">
+      {{/* Title */}}
+      <h1 class="text-2xl md:text-3xl font-bold text-90 text-balance">{{ .Title }}</h1>
+
+      {{/* Meta */}}
+      {{ partial "post-meta.html" . }}
+    </div>
+  </div>
+
+  {{/* Content area with optional TOC */}}
+  <div class="relative flex gap-4">
+    {{/* Main content */}}
+    <div class="card-base onload-animation p-6 md:p-8 flex-1 min-w-0">
+      <div class="prose prose-lg max-w-none">
+        {{ .Content }}
+      </div>
+    </div>
+
+    {{/* TOC — desktop only, fixed position */}}
+    {{ if and (site.Params.toc.enable | default true) (.TableOfContents) }}
+    <aside class="hidden 2xl:block w-[var(--toc-width)] shrink-0">
+      <div class="sticky top-20">
+        {{ partial "toc.html" . }}
+      </div>
+    </aside>
+    {{ end }}
+  </div>
+
+  {{/* License */}}
+  {{ if site.Params.license.enable | default false }}
+  <div class="onload-animation">
+    {{ partial "license.html" . }}
+  </div>
+  {{ end }}
+
+  {{/* Post navigation (prev/next) */}}
+  {{ $posts := where site.RegularPages "Section" "posts" }}
+  {{ $currentIndex := 0 }}
+  {{ range $i, $p := $posts }}
+    {{ if eq $p.Permalink $.Permalink }}
+      {{ $currentIndex = $i }}
+    {{ end }}
+  {{ end }}
+  {{ $prev := index $posts (add $currentIndex 1) }}
+  {{ $next := false }}
+  {{ if gt $currentIndex 0 }}
+    {{ $next = index $posts (sub $currentIndex 1) }}
+  {{ end }}
+
+  {{ if or $prev $next }}
+  <div class="card-base onload-animation p-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+    {{ if $next }}
+    <a href="{{ $next.Permalink }}" class="flex items-center gap-3 p-3 rounded-lg no-underline hover:bg-[var(--btn-card-bg-hover)] transition-colors group">
+      {{ partial "icon.html" (dict "name" "chevron-right" "class" "w-5 h-5 rotate-180 text-50 group-hover:text-[var(--primary)]") }}
+      <div class="flex flex-col min-w-0">
+        <span class="text-xs text-50">{{ i18n "newerPost" | default "Newer" }}</span>
+        <span class="text-sm font-medium text-75 truncate group-hover:text-[var(--primary)]">{{ $next.Title }}</span>
+      </div>
+    </a>
+    {{ else }}<div></div>{{ end }}
+
+    {{ if $prev }}
+    <a href="{{ $prev.Permalink }}" class="flex items-center justify-end gap-3 p-3 rounded-lg no-underline hover:bg-[var(--btn-card-bg-hover)] transition-colors group text-right">
+      <div class="flex flex-col min-w-0">
+        <span class="text-xs text-50">{{ i18n "olderPost" | default "Older" }}</span>
+        <span class="text-sm font-medium text-75 truncate group-hover:text-[var(--primary)]">{{ $prev.Title }}</span>
+      </div>
+      {{ partial "icon.html" (dict "name" "chevron-right" "class" "w-5 h-5 text-50 group-hover:text-[var(--primary)]") }}
+    </a>
+    {{ else }}<div></div>{{ end }}
+  </div>
+  {{ end }}
+
+  {{/* Comments */}}
+  {{ if site.Params.comments.provider }}
+  <div class="card-base onload-animation p-6 md:p-8">
+    {{ partial "comments.html" . }}
+  </div>
+  {{ end }}
+
+</article>
+{{ end }}

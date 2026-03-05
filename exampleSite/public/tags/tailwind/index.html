@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="Hugo 0.157.0"><title>Tailwind | KIRARI</title>
+<meta name="description" content="A demo site for the Kirari Hugo theme">
+
+
+<meta property="og:title" content="Tailwind | KIRARI">
+<meta property="og:type" content="website">
+<meta property="og:url" content="http://localhost:1313/tags/tailwind/">
+<meta property="og:image" content="http://localhost:1313/images/banner.png">
+<meta property="og:description" content="A demo site for the Kirari Hugo theme">
+<meta property="og:site_name" content="KIRARI">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tailwind | KIRARI">
+<meta name="twitter:description" content="A demo site for the Kirari Hugo theme">
+
+
+<link rel="canonical" href="http://localhost:1313/tags/tailwind/">
+
+
+<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/tags/tailwind/index.xml" title="KIRARI">
+
+
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1a1a2e" media="(prefers-color-scheme: dark)">
+
+
+  
+  
+    
+      <link rel="stylesheet" href="/css/main.css">
+    
+  
+
+
+  <script>
+    ;(function(){
+      var s = localStorage.getItem('kirari-theme-mode');
+      if (s === 'dark' || (!s && window.matchMedia('(prefers-color-scheme:dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else if (s === 'light') {
+        document.documentElement.classList.remove('dark');
+      }
+      var h = localStorage.getItem('kirari-hue');
+      if (h) document.documentElement.style.setProperty('--hue', h);
+    })();
+  </script>
+</head>
+<body class="min-h-screen bg-[var(--page-bg)] transition-colors duration-300">
+
+  
+  
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-transform duration-300">
+  <div class="max-w-[var(--page-width)] mx-auto px-4 py-3">
+    <div class="card-base flex items-center justify-between px-4 h-14 shadow-sm">
+
+      
+      <a href="/" class="flex items-center gap-2 btn-plain font-bold text-lg no-underline">
+        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <span class="hidden sm:inline">KIRARI</span>
+      </a>
+
+      
+      <div class="hidden md:flex items-center gap-1">
+        
+          <a href="/" class="btn-plain px-3 py-1.5 rounded-lg text-sm font-medium gap-1.5 no-underline
+            hover:bg-[var(--btn-plain-bg-hover)] active:bg-[var(--btn-plain-bg-active)]
+            "
+            >
+            
+              <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            
+            Home
+            
+          </a>
+        
+          <a href="/archive/" class="btn-plain px-3 py-1.5 rounded-lg text-sm font-medium gap-1.5 no-underline
+            hover:bg-[var(--btn-plain-bg-hover)] active:bg-[var(--btn-plain-bg-active)]
+            "
+            >
+            
+              <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg>
+            
+            Archive
+            
+          </a>
+        
+          <a href="/about/" class="btn-plain px-3 py-1.5 rounded-lg text-sm font-medium gap-1.5 no-underline
+            hover:bg-[var(--btn-plain-bg-hover)] active:bg-[var(--btn-plain-bg-active)]
+            "
+            >
+            
+              <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            
+            About
+            
+          </a>
+        
+          <a href="/friends/" class="btn-plain px-3 py-1.5 rounded-lg text-sm font-medium gap-1.5 no-underline
+            hover:bg-[var(--btn-plain-bg-hover)] active:bg-[var(--btn-plain-bg-active)]
+            "
+            >
+            
+              <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            
+            Friends
+            
+          </a>
+        
+      </div>
+
+      
+      <div class="flex items-center gap-1">
+
+        
+        
+        <div class="hidden md:flex items-center relative">
+          <input id="search-input-desktop" type="text"
+            placeholder="Search articles..."
+            class="w-40 focus:w-60 transition-all duration-300 h-9 pl-9 pr-3 rounded-lg text-sm
+            bg-[var(--btn-regular-bg)] text-75 placeholder:text-50
+            focus:outline-none focus:ring-2 focus:ring-[var(--primary)]/30"
+            autocomplete="off">
+          <span class="absolute left-2.5 top-1/2 -translate-y-1/2 text-50 pointer-events-none">
+            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </span>
+          
+          <div id="search-results-desktop" class="absolute top-full mt-2 left-0 right-0 w-80 float-panel p-2 hidden max-h-96 overflow-y-auto">
+          </div>
+        </div>
+        
+
+        
+        
+        <button id="btn-search-mobile" class="md:hidden btn-plain w-9 h-9 rounded-lg" aria-label="Search">
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        
+
+        
+        
+        <button id="btn-display-settings" class="btn-plain w-9 h-9 rounded-lg" aria-label="Display Settings">
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="0.5" fill="currentColor"/><circle cx="17.5" cy="10.5" r="0.5" fill="currentColor"/><circle cx="8.5" cy="7.5" r="0.5" fill="currentColor"/><circle cx="6.5" cy="12.5" r="0.5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+        </button>
+        
+
+        
+        <button id="btn-theme-toggle" class="btn-plain w-9 h-9 rounded-lg" aria-label="Toggle theme" data-theme-mode="auto">
+          <span class="theme-icon theme-icon-light hidden"><svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+          <span class="theme-icon theme-icon-dark hidden"><svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+          <span class="theme-icon theme-icon-auto"><svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>
+        </button>
+
+        
+        <button id="btn-menu-toggle" class="md:hidden btn-plain w-9 h-9 rounded-lg" aria-label="Menu">
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+  
+  
+
+<div id="search-overlay" class="panel-overlay hidden" aria-hidden="true"></div>
+<div id="search-panel" class="slide-panel inset-x-4 top-24 rounded-[var(--radius-large)] translate-y-[-120%] mx-auto max-w-lg"
+  style="position: fixed;">
+  <div class="p-4 flex flex-col gap-3">
+    
+    <div class="relative">
+      <input id="search-input-mobile" type="text"
+        placeholder="Search articles..."
+        class="w-full h-10 pl-10 pr-3 rounded-lg text-sm
+        bg-[var(--btn-regular-bg)] text-75 placeholder:text-50
+        focus:outline-none focus:ring-2 focus:ring-[var(--primary)]/30"
+        autocomplete="off">
+      <span class="absolute left-3 top-1/2 -translate-y-1/2 text-50">
+        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </span>
+    </div>
+    
+    <div id="search-results-mobile" class="flex flex-col gap-1 max-h-64 overflow-y-auto">
+    </div>
+  </div>
+</div>
+
+
+  
+<div id="nav-menu-overlay" class="panel-overlay hidden" aria-hidden="true"></div>
+<div id="nav-menu-panel" class="slide-panel top-0 right-0 w-72 h-full translate-x-full rounded-l-[var(--radius-large)]">
+  <div class="p-4 flex flex-col h-full">
+    
+    <div class="flex items-center justify-between mb-4">
+      <span class="text-lg font-bold text-90">Menu</span>
+      <button id="btn-menu-close" class="btn-plain w-9 h-9 rounded-lg" aria-label="Close">
+        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    
+    <nav class="flex flex-col gap-1">
+      
+      <a href="/" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-75 no-underline
+        hover:bg-[var(--btn-plain-bg-hover)] transition-colors duration-200
+        ">
+        
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        
+        <span class="font-medium">Home</span>
+      </a>
+      
+      <a href="/archive/" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-75 no-underline
+        hover:bg-[var(--btn-plain-bg-hover)] transition-colors duration-200
+        ">
+        
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg>
+        
+        <span class="font-medium">Archive</span>
+      </a>
+      
+      <a href="/about/" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-75 no-underline
+        hover:bg-[var(--btn-plain-bg-hover)] transition-colors duration-200
+        ">
+        
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        
+        <span class="font-medium">About</span>
+      </a>
+      
+      <a href="/friends/" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-75 no-underline
+        hover:bg-[var(--btn-plain-bg-hover)] transition-colors duration-200
+        ">
+        
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        
+        <span class="font-medium">Friends</span>
+      </a>
+      
+    </nav>
+
+    
+    <div class="mt-auto pt-4 border-t border-[var(--line-color)]">
+      
+
+
+
+
+<div class="card-base p-5 flex flex-col items-center text-center gap-3">
+  
+  
+  <a href="/" class="relative group">
+    <img src="/images/avatar.png" alt="Lorem Ipsum"
+      class="w-24 h-24 rounded-xl object-cover shadow-sm transition-all duration-300 group-hover:shadow-md">
+    <div class="absolute inset-0 rounded-xl bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+      <span class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </span>
+    </div>
+  </a>
+  
+
+  
+  <div>
+    <h2 class="text-lg font-bold text-90">Lorem Ipsum</h2>
+    
+      <p class="text-sm text-50 mt-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    
+  </div>
+
+  
+  
+  <div class="flex items-center gap-2 flex-wrap justify-center">
+    
+    <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+      class="btn-regular w-9 h-9 rounded-lg no-underline" aria-label="GitHub" title="GitHub">
+      <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+    </a>
+    
+    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
+      class="btn-regular w-9 h-9 rounded-lg no-underline" aria-label="Twitter" title="Twitter">
+      <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+    </a>
+    
+    <a href="/index.xml" target="_blank" rel="noopener noreferrer"
+      class="btn-regular w-9 h-9 rounded-lg no-underline" aria-label="RSS" title="RSS">
+      <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
+    </a>
+    
+  </div>
+  
+</div>
+
+    </div>
+  </div>
+</div>
+
+  
+
+<div id="display-settings-overlay" class="panel-overlay hidden" aria-hidden="true"></div>
+<div id="display-settings-panel" class="slide-panel top-0 right-0 w-72 h-auto max-h-[60vh] translate-x-full rounded-l-[var(--radius-large)] mt-20 mr-0 rounded-[var(--radius-large)]"
+  style="position: fixed; top: 5rem; right: 1rem;">
+  <div class="p-5 flex flex-col gap-4">
+    
+    <div class="flex items-center justify-between">
+      <span class="text-sm font-bold text-75 flex items-center gap-2">
+        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="0.5" fill="currentColor"/><circle cx="17.5" cy="10.5" r="0.5" fill="currentColor"/><circle cx="8.5" cy="7.5" r="0.5" fill="currentColor"/><circle cx="6.5" cy="12.5" r="0.5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+        Display Settings
+      </span>
+      <button id="btn-display-settings-close" class="btn-plain w-7 h-7 rounded-lg" aria-label="Close">
+        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    
+    <div>
+      <label class="text-xs text-50 mb-2 block">Theme Color</label>
+      <input type="range" id="hue-slider" class="hue-slider" min="0" max="360" step="1"
+        value="250">
+    </div>
+
+    
+    <div>
+      <label class="text-xs text-50 mb-2 block">Theme Mode</label>
+      <div class="flex gap-2">
+        <button data-set-theme="light" class="theme-mode-btn flex-1 btn-regular py-2 rounded-lg text-xs gap-1.5">
+          <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          Light
+        </button>
+        <button data-set-theme="dark" class="theme-mode-btn flex-1 btn-regular py-2 rounded-lg text-xs gap-1.5">
+          <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          Dark
+        </button>
+        <button data-set-theme="auto" class="theme-mode-btn flex-1 btn-regular py-2 rounded-lg text-xs gap-1.5">
+          <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          Auto
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  
+  
+  <div id="banner-wrapper" class="relative w-full overflow-hidden h-[var(--banner-height)] transition-[height] duration-500">
+    
+
+
+
+
+<div class="absolute inset-0 bg-[var(--page-bg)]">
+  
+    <div class="absolute inset-0 bg-cover bg-no-repeat transition-all duration-500"
+      style="background-image: url('/images/banner.png'); background-position: center;">
+      
+      <div class="absolute inset-0 bg-gradient-to-b from-black/10 to-[var(--page-bg)]"></div>
+    </div>
+  
+
+  
+  
+    <div class="absolute bottom-2 right-4 text-xs text-white/60">
+      
+        <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer" class="hover:text-white/90 no-underline">
+          Photo by Unsplash
+        </a>
+      
+    </div>
+  
+</div>
+
+  </div>
+
+  
+  <div class="relative w-full max-w-[var(--page-width)] mx-auto px-4 -mt-16">
+    <div class="grid grid-cols-1 lg:grid-cols-[17.5rem_auto] gap-4">
+      
+      <aside class="sidebar-wrapper hidden lg:block">
+        <div class="sticky top-4 flex flex-col gap-4">
+          
+<div class="onload-animation">
+  
+
+
+
+
+<div class="card-base p-5 flex flex-col items-center text-center gap-3">
+  
+  
+  <a href="/" class="relative group">
+    <img src="/images/avatar.png" alt="Lorem Ipsum"
+      class="w-24 h-24 rounded-xl object-cover shadow-sm transition-all duration-300 group-hover:shadow-md">
+    <div class="absolute inset-0 rounded-xl bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+      <span class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </span>
+    </div>
+  </a>
+  
+
+  
+  <div>
+    <h2 class="text-lg font-bold text-90">Lorem Ipsum</h2>
+    
+      <p class="text-sm text-50 mt-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    
+  </div>
+
+  
+  
+  <div class="flex items-center gap-2 flex-wrap justify-center">
+    
+    <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+      class="btn-regular w-9 h-9 rounded-lg no-underline" aria-label="GitHub" title="GitHub">
+      <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+    </a>
+    
+    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
+      class="btn-regular w-9 h-9 rounded-lg no-underline" aria-label="Twitter" title="Twitter">
+      <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+    </a>
+    
+    <a href="/index.xml" target="_blank" rel="noopener noreferrer"
+      class="btn-regular w-9 h-9 rounded-lg no-underline" aria-label="RSS" title="RSS">
+      <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
+    </a>
+    
+  </div>
+  
+</div>
+
+</div>
+<div class="onload-animation">
+  
+
+
+<div class="card-base p-4" data-widget="categories">
+  
+  <button class="widget-toggle flex items-center justify-between w-full text-left" aria-expanded="true">
+    <span class="text-sm font-bold text-75 flex items-center gap-2">
+      <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+      Categories
+    </span>
+    <span class="widget-arrow transition-transform duration-200 text-50">
+      <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </span>
+  </button>
+
+  
+  <div class="widget-content mt-3 flex flex-col gap-1" style="max-height: 400px;">
+    
+    <a href="/categories/blog/"
+      class="flex items-center justify-between px-2 py-1.5 rounded-lg text-sm text-75 no-underline
+      hover:bg-[var(--btn-plain-bg-hover)] transition-colors duration-200">
+      <span>blog</span>
+      <span class="text-xs text-50 bg-[var(--btn-regular-bg)] rounded-full px-2 py-0.5">1</span>
+    </a>
+    
+    <a href="/categories/development/"
+      class="flex items-center justify-between px-2 py-1.5 rounded-lg text-sm text-75 no-underline
+      hover:bg-[var(--btn-plain-bg-hover)] transition-colors duration-200">
+      <span>development</span>
+      <span class="text-xs text-50 bg-[var(--btn-regular-bg)] rounded-full px-2 py-0.5">1</span>
+    </a>
+    
+    <a href="/categories/tutorial/"
+      class="flex items-center justify-between px-2 py-1.5 rounded-lg text-sm text-75 no-underline
+      hover:bg-[var(--btn-plain-bg-hover)] transition-colors duration-200">
+      <span>tutorial</span>
+      <span class="text-xs text-50 bg-[var(--btn-regular-bg)] rounded-full px-2 py-0.5">2</span>
+    </a>
+    
+  </div>
+</div>
+
+
+</div>
+<div class="onload-animation">
+  
+
+
+<div class="card-base p-4" data-widget="tags">
+  
+  <button class="widget-toggle flex items-center justify-between w-full text-left" aria-expanded="true">
+    <span class="text-sm font-bold text-75 flex items-center gap-2">
+      <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+      Tags
+    </span>
+    <span class="widget-arrow transition-transform duration-200 text-50">
+      <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </span>
+  </button>
+
+  
+  <div class="widget-content mt-3 flex flex-wrap gap-2" style="max-height: 300px;">
+    
+    <a href="/tags/css/"
+      class="btn-regular text-xs px-3 py-1.5 rounded-full no-underline">
+      css
+    </a>
+    
+    <a href="/tags/frontend/"
+      class="btn-regular text-xs px-3 py-1.5 rounded-full no-underline">
+      frontend
+    </a>
+    
+    <a href="/tags/getting-started/"
+      class="btn-regular text-xs px-3 py-1.5 rounded-full no-underline">
+      getting started
+    </a>
+    
+    <a href="/tags/guide/"
+      class="btn-regular text-xs px-3 py-1.5 rounded-full no-underline">
+      guide
+    </a>
+    
+    <a href="/tags/hugo/"
+      class="btn-regular text-xs px-3 py-1.5 rounded-full no-underline">
+      hugo
+    </a>
+    
+    <a href="/tags/kirari/"
+      class="btn-regular text-xs px-3 py-1.5 rounded-full no-underline">
+      kirari
+    </a>
+    
+    <a href="/tags/markdown/"
+      class="btn-regular text-xs px-3 py-1.5 rounded-full no-underline">
+      markdown
+    </a>
+    
+    <a href="/tags/static-site/"
+      class="btn-regular text-xs px-3 py-1.5 rounded-full no-underline">
+      static site
+    </a>
+    
+    <a href="/tags/styling/"
+      class="btn-regular text-xs px-3 py-1.5 rounded-full no-underline">
+      styling
+    </a>
+    
+    <a href="/tags/tailwind/"
+      class="btn-regular text-xs px-3 py-1.5 rounded-full no-underline">
+      tailwind
+    </a>
+    
+    <a href="/tags/tips/"
+      class="btn-regular text-xs px-3 py-1.5 rounded-full no-underline">
+      tips
+    </a>
+    
+  </div>
+</div>
+
+
+</div>
+
+        </div>
+      </aside>
+
+      
+      <main class="flex flex-col gap-4 min-w-0">
+        
+  
+  <div class="card-base onload-animation p-5 flex items-center gap-3">
+    <div class="w-1 h-6 rounded-full bg-[var(--primary)]"></div>
+    
+      <svg class="w-5 h-5 text-75" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+    
+    <h1 class="text-xl font-bold text-90">Tailwind</h1>
+    <span class="text-sm text-50">(1)</span>
+  </div>
+
+  
+  
+  
+    <div class="onload-animation">
+      
+
+<a href="http://localhost:1313/posts/tailwind-tips/" class="card-base group block no-underline hover:shadow-md transition-all duration-300">
+  <div class="relative flex flex-col-reverse md:flex-row">
+
+    
+    <div class="flex-1 p-5 md:p-6 flex flex-col gap-3 ">
+      
+      <div class="flex items-center gap-3">
+        <div class="w-1 h-5 rounded-full bg-[var(--primary)] shrink-0"></div>
+        <h2 class="text-lg font-bold text-90 group-hover:text-[var(--primary)] transition-colors duration-200 line-clamp-2">
+          Tailwind CSS Best Practices
+        </h2>
+      </div>
+
+      
+      
+      <p class="text-sm text-50 line-clamp-2 ml-4">Learn best practices for using Tailwind CSS in your projects</p>
+      
+
+      
+      <div class="flex items-center flex-wrap gap-x-3 gap-y-1 text-xs text-50 ml-4">
+        
+        <span class="flex items-center gap-1">
+          <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <time datetime="2024-01-01">Jan 01, 2024</time>
+        </span>
+
+        
+        
+        <span class="meta-divider">|</span>
+        <span class="flex items-center gap-1">
+          <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+          Development
+        </span>
+        
+
+        
+        <span class="meta-divider">|</span>
+        <span class="flex items-center gap-1">
+          <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          1 min read
+        </span>
+      </div>
+
+      
+      
+      <div class="flex flex-wrap gap-1.5 ml-4 mt-1">
+        
+        <span class="text-xs px-2 py-0.5 rounded-full bg-[var(--btn-regular-bg)] text-[var(--btn-content)]">
+          Tailwind
+        </span>
+        
+        <span class="text-xs px-2 py-0.5 rounded-full bg-[var(--btn-regular-bg)] text-[var(--btn-content)]">
+          CSS
+        </span>
+        
+        <span class="text-xs px-2 py-0.5 rounded-full bg-[var(--btn-regular-bg)] text-[var(--btn-content)]">
+          Frontend
+        </span>
+        
+      </div>
+      
+    </div>
+
+    
+    
+    <div class="hidden md:flex items-center pr-6 pl-2">
+      <div class="w-8 h-8 rounded-full flex items-center justify-center text-50 group-hover:text-[var(--primary)] transition-all duration-200 group-hover:translate-x-1">
+        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+    </div>
+    
+
+  </div>
+</a>
+
+    </div>
+  
+
+  
+
+      </main>
+    </div>
+  </div>
+
+  
+  
+<footer class="w-full max-w-[var(--page-width)] mx-auto px-4 mt-8">
+  <div class="card-base p-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-50">
+    <div class="flex items-center gap-1">
+      <span>&copy; 2026 Lorem Ipsum</span>
+    </div>
+    <div class="flex items-center gap-4">
+      <span>Powered by <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer" class="link">Hugo</a></span>
+      <span class="meta-divider">|</span>
+      <span>Theme <a href="https://github.com/markd3ng/KIRARI" target="_blank" rel="noopener noreferrer" class="link">Kirari</a></span>
+      
+      <a href="http://localhost:1313/tags/tailwind/index.xml" class="btn-plain" aria-label="RSS">
+        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
+      </a>
+      
+    </div>
+  </div>
+  <div class="h-6"></div>
+</footer>
+
+
+  
+  
+<button id="back-to-top" class="hide fixed bottom-6 right-6 z-30 btn-regular w-10 h-10 rounded-full shadow-lg" aria-label="Back to top">
+  <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+</button>
+
+
+  
+  
+  
+  
+  
+  <script defer src="/js/theme-toggle.min.c6502143f467a4619930ba604c1d06a216d0f4678c7b1578f078bb1a3cbfa52e.js" integrity="sha256-xlAhQ/RnpGGZMLpgTB0GohbQ9GeMexV48Hi7Gjy/pS4="></script>
+  <script defer src="/js/navbar.min.eb5d2eeed59e619bba983c0e22e20837dc3d2bfc0386843b73732bec5085e295.js" integrity="sha256-610u7tWeYZu6mDwOIuIIN9w9K/wDhoQ7c3Mr7FCF4pU="></script>
+  <script defer src="/js/scroll-utils.min.d72efc61a7f28520858580396a1491a1312739ec10a4b47a724048e98b34e2ac.js" integrity="sha256-1y78YafyhSCFhYA5ahSRoTEnOewQpLR6ckBI6Ys04qw="></script>
+  <script defer src="/js/sidebar-collapse.min.26e748188561f807b16cf87d8d7c44f8120dd28e9c1d4c41eac89e546b9f3e3f.js" integrity="sha256-JudIGIVh&#43;AexbPh9jXxE&#43;BIN0o6cHUxB6sieVGufPj8="></script>
+  
+    
+    <script defer src="/js/search.min.4cdf8cce9947a47cccb3e3685507a39934329853a15568b1e86f340e6f846298.js" integrity="sha256-TN&#43;MzplHpHzMs&#43;NoVQejmTQymFOhVWix6G80Dm&#43;EYpg="></script>
+  
+  
+</body>
+</html>

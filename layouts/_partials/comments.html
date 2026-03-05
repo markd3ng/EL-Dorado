@@ -1,0 +1,40 @@
+{{/* Kirari Comments — Giscus or Waline */}}
+{{ $provider := site.Params.comments.provider | default "" }}
+
+{{ if eq $provider "giscus" }}
+  {{ with site.Params.comments.giscus }}
+  <div id="comments" class="mt-2">
+    <script src="https://giscus.app/client.js"
+      data-repo="{{ .repo }}"
+      data-repo-id="{{ .repoId }}"
+      data-category="{{ .category }}"
+      data-category-id="{{ .categoryId }}"
+      data-mapping="{{ .mapping | default "pathname" }}"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="preferred_color_scheme"
+      data-lang="{{ site.Language.Lang }}"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async>
+    </script>
+  </div>
+  {{ end }}
+
+{{ else if eq $provider "waline" }}
+  {{ with site.Params.comments.waline }}
+  <div id="waline-comments" class="mt-2"></div>
+  <link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css">
+  <script type="module">
+    import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+    init({
+      el: '#waline-comments',
+      serverURL: '{{ .serverURL }}',
+      lang: '{{ site.Language.Lang }}',
+    });
+  </script>
+  {{ end }}
+
+{{ end }}

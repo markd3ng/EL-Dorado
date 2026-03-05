@@ -1,0 +1,19 @@
+- name: "Hugo"
+  url: "https://gohugo.io"
+  avatar: "https://gohugo.io/images/hugo-logo-wide.svg"
+  description: "The world's fastest framework for building websites"
+
+- name: "Tailwind CSS"
+  url: "https://tailwindcss.com"
+  avatar: "https://tailwindcss.com/_next/static/media/tailwindcss-mark.3c5441fc7a190fb1800d4a5c7f07ba4b1345a9c8.svg"
+  description: "A utility-first CSS framework"
+
+- name: "Astro"
+  url: "https://astro.build"
+  avatar: "https://astro.build/assets/press/astro-icon-light-gradient.svg"
+  description: "The web framework for content-driven websites"
+
+- name: "Vercel"
+  url: "https://vercel.com"
+  avatar: "https://assets.vercel.com/image/upload/front/favicon/vercel/180x180.png"
+  description: "Develop. Preview. Ship."

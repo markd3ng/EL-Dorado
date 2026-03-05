@@ -1,0 +1,32 @@
+{{/* Kirari Mobile Navigation Panel */}}
+<div id="nav-menu-overlay" class="panel-overlay hidden" aria-hidden="true"></div>
+<div id="nav-menu-panel" class="slide-panel top-0 right-0 w-72 h-full translate-x-full rounded-l-[var(--radius-large)]">
+  <div class="p-4 flex flex-col h-full">
+    {{/* Header */}}
+    <div class="flex items-center justify-between mb-4">
+      <span class="text-lg font-bold text-90">{{ i18n "menu" | default "Menu" }}</span>
+      <button id="btn-menu-close" class="btn-plain w-9 h-9 rounded-lg" aria-label="{{ i18n "close" | default "Close" }}">
+        {{ partial "icon.html" (dict "name" "x" "class" "w-5 h-5") }}
+      </button>
+    </div>
+
+    {{/* Navigation links */}}
+    <nav class="flex flex-col gap-1">
+      {{ range site.Menus.main }}
+      <a href="{{ .URL }}" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-75 no-underline
+        hover:bg-[var(--btn-plain-bg-hover)] transition-colors duration-200
+        {{ if $.IsMenuCurrent "main" . }}bg-[var(--btn-plain-bg-hover)] text-[var(--primary)]{{ end }}">
+        {{ if .Params.icon }}
+          {{ partial "icon.html" (dict "name" .Params.icon "class" "w-5 h-5") }}
+        {{ end }}
+        <span class="font-medium">{{ .Name }}</span>
+      </a>
+      {{ end }}
+    </nav>
+
+    {{/* Profile (mobile sidebar) */}}
+    <div class="mt-auto pt-4 border-t border-[var(--line-color)]">
+      {{ partial "profile.html" . }}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+{{/* Kirari Post Meta — used in post detail pages */}}
+<div class="flex items-center flex-wrap gap-x-4 gap-y-2 text-sm text-50">
+  {{/* Published date */}}
+  <span class="flex items-center gap-1.5">
+    {{ partial "icon.html" (dict "name" "calendar" "class" "w-4 h-4") }}
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 02, 2006" }}</time>
+  </span>
+
+  {{/* Last modified */}}
+  {{ if and .Lastmod (not (.Lastmod.Equal .Date)) }}
+  <span class="flex items-center gap-1.5">
+    {{ partial "icon.html" (dict "name" "pen" "class" "w-4 h-4") }}
+    <time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ i18n "updatedOn" | default "Updated" }} {{ .Lastmod.Format "Jan 02, 2006" }}</time>
+  </span>
+  {{ end }}
+
+  {{/* Categories */}}
+  {{ with .Params.categories }}
+  <span class="meta-divider">|</span>
+  <span class="flex items-center gap-1.5">
+    {{ partial "icon.html" (dict "name" "folder" "class" "w-4 h-4") }}
+    {{ range $i, $cat := . }}
+      {{ if $i }}, {{ end }}
+      <a href="{{ `/categories/` | relURL }}{{ $cat | urlize }}/" class="link no-underline hover:underline">{{ $cat }}</a>
+    {{ end }}
+  </span>
+  {{ end }}
+
+  {{/* Word count & reading time */}}
+  <span class="meta-divider">|</span>
+  <span class="flex items-center gap-1.5">
+    {{ partial "icon.html" (dict "name" "book-open" "class" "w-4 h-4") }}
+    {{ .WordCount }} {{ i18n "words" | default "words" }}
+  </span>
+  <span class="flex items-center gap-1.5">
+    {{ partial "icon.html" (dict "name" "clock" "class" "w-4 h-4") }}
+    {{ .ReadingTime }} {{ i18n "minRead" | default "min read" }}
+  </span>
+</div>
+
+{{/* Tags */}}
+{{ with .Params.tags }}
+<div class="flex flex-wrap gap-2 mt-3">
+  {{ range . }}
+  <a href="{{ `/tags/` | relURL }}{{ . | urlize }}/"
+    class="btn-regular text-xs px-3 py-1 rounded-full no-underline">
+    {{ partial "icon.html" (dict "name" "tag" "class" "w-3 h-3") }}
+    {{ . }}
+  </a>
+  {{ end }}
+</div>
+{{ end }}

@@ -1,0 +1,24 @@
+{{ define "main" }}
+  {{/* Post list */}}
+  {{ $paginator := .Paginate (where site.RegularPages "Section" "posts") }}
+  {{ range $index, $page := $paginator.Pages }}
+    <div class="onload-animation">
+      {{ partial "post-card.html" $page }}
+    </div>
+  {{ end }}
+
+  {{/* Empty state */}}
+  {{ if not $paginator.Pages }}
+    <div class="card-base p-12 flex flex-col items-center justify-center text-center gap-4">
+      {{ partial "icon.html" (dict "name" "pen" "class" "w-12 h-12 text-50") }}
+      <p class="text-75 text-lg">{{ i18n "noPosts" | default "No posts yet" }}</p>
+    </div>
+  {{ end }}
+
+  {{/* Pagination */}}
+  {{ if gt $paginator.TotalPages 1 }}
+    <div class="onload-animation">
+      {{ partial "pagination.html" $paginator }}
+    </div>
+  {{ end }}
+{{ end }}

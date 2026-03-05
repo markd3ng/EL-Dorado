@@ -1,0 +1,12 @@
+name = "Kirari"
+license = "MIT"
+licenselink = "https://github.com/markd3ng/KIRARI/blob/main/LICENSE"
+description = "A Hugo port of Kirari — a clean, modern blog theme based on Fuwari"
+homepage = "https://github.com/markd3ng/KIRARI"
+tags = ["blog", "tailwind", "dark-mode", "responsive", "multilingual"]
+features = ["banner", "sidebar", "toc", "search", "comments", "archive", "friends"]
+min_version = "0.146.0"
+
+[author]
+  name = "markd3ng"
+  homepage = "https://github.com/markd3ng"

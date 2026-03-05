@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Hugo generated files
+/public/
+/resources/_gen/
+*.log
+
+# Editor directories and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Local development files
+exampleSite/themes/kirari-hugo-theme/

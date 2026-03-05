@@ -1,0 +1,26 @@
+{{/* Kirari Tags Widget */}}
+{{ $tags := site.Taxonomies.tags }}
+{{ if $tags }}
+<div class="card-base p-4" data-widget="tags">
+  {{/* Header with collapse toggle */}}
+  <button class="widget-toggle flex items-center justify-between w-full text-left" aria-expanded="true">
+    <span class="text-sm font-bold text-75 flex items-center gap-2">
+      {{ partial "icon.html" (dict "name" "tag" "class" "w-4 h-4") }}
+      {{ i18n "tags" | default "Tags" }}
+    </span>
+    <span class="widget-arrow transition-transform duration-200 text-50">
+      {{ partial "icon.html" (dict "name" "chevron-down" "class" "w-4 h-4") }}
+    </span>
+  </button>
+
+  {{/* Content */}}
+  <div class="widget-content mt-3 flex flex-wrap gap-2" style="max-height: 300px;">
+    {{ range $name, $taxonomy := $tags }}
+    <a href="{{ `/tags/` | relURL }}{{ $name | urlize }}/"
+      class="btn-regular text-xs px-3 py-1.5 rounded-full no-underline">
+      {{ $name }}
+    </a>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
