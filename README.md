@@ -14,6 +14,7 @@ A beautiful, modern Hugo theme inspired by [Kirari](https://github.com/markd3ng/
 - Mac-style Geek Code Blocks (Expandable, One-click Copy)
 - Table of Contents with scroll highlighting
 - Virtual OverlayScrollbars for sleek scrolling
+- SPA Seamless Page Transitions (Swup integration)
 - Categories and Tags taxonomy
 - Archive page with timeline view
 - Friends page for blogroll

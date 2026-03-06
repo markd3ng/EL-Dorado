@@ -1,4 +1,6 @@
-document.addEventListener('DOMContentLoaded', () => {
+let bodyOsInitialized = false;
+
+function initOverlayScrollbars() {
     if (typeof window.OverlayScrollbarsGlobal === 'undefined') {
         console.error('OverlayScrollbars is not loaded.');
         return;
@@ -6,14 +8,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const { OverlayScrollbars } = window.OverlayScrollbarsGlobal;
 
-    // Initialize on body
-    OverlayScrollbars(document.body, {
-        scrollbars: {
-            theme: 'os-theme-dark',
-            autoHide: 'scroll',
-            clickScroll: true
-        },
-    });
+    // Initialize on body only once
+    if (!bodyOsInitialized) {
+        OverlayScrollbars(document.body, {
+            scrollbars: {
+                theme: 'os-theme-dark',
+                autoHide: 'scroll',
+                clickScroll: true
+            },
+        });
+        bodyOsInitialized = true;
+    }
 
     // Initialize on TOC
     const tocNav = document.querySelector('.toc-nav');
@@ -39,4 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
         });
     });
-});
+}
+
+document.addEventListener('DOMContentLoaded', initOverlayScrollbars);
+document.addEventListener('kirari:init', initOverlayScrollbars);

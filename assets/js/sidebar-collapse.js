@@ -1,8 +1,8 @@
 /**
  * Kirari Sidebar Widget Collapse/Expand
  */
-;(function () {
-  document.addEventListener('DOMContentLoaded', function () {
+; (function () {
+  function initSidebarCollapse() {
     const toggles = document.querySelectorAll('.widget-toggle');
 
     toggles.forEach(function (toggle) {
@@ -25,5 +25,8 @@
         }
       });
     });
-  });
+  }
+
+  document.addEventListener('DOMContentLoaded', initSidebarCollapse);
+  document.addEventListener('kirari:init', initSidebarCollapse);
 })();

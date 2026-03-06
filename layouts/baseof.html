@@ -30,28 +30,31 @@
   {{ partial "nav-menu-panel.html" . }}
   {{ partial "display-settings.html" . }}
 
-  {{/* ── Banner ── */}}
-  {{ $isHome := .IsHome }}
-  <div id="banner-wrapper"
-    class="relative w-full overflow-hidden {{ if $isHome }}h-[var(--banner-height-home)]{{ else }}h-[var(--banner-height)]{{ end }} transition-[height] duration-500">
-    {{ partial "banner.html" . }}
-  </div>
+  {{/* ── Swup Container ── */}}
+  <div id="swup" class="transition-fade">
+    {{/* ── Banner ── */}}
+    {{ $isHome := .IsHome }}
+    <div id="banner-wrapper"
+      class="relative w-full overflow-hidden {{ if $isHome }}h-[var(--banner-height-home)]{{ else }}h-[var(--banner-height)]{{ end }} transition-[height] duration-500">
+      {{ partial "banner.html" . }}
+    </div>
 
-  {{/* ── Main grid ── */}}
-  <div
-    class="relative w-full max-w-[var(--page-width)] mx-auto px-4 {{ if $isHome }}-mt-[8vh]{{ else }}-mt-16{{ end }}">
-    <div class="grid grid-cols-1 lg:grid-cols-[17.5rem_auto] gap-4">
-      {{/* ── Sidebar ── */}}
-      <aside class="sidebar-wrapper hidden lg:block">
-        <div class="sticky top-4 flex flex-col gap-4">
-          {{ partial "sidebar.html" . }}
-        </div>
-      </aside>
+    {{/* ── Main grid ── */}}
+    <div
+      class="relative w-full max-w-[var(--page-width)] mx-auto px-4 {{ if $isHome }}-mt-[8vh]{{ else }}-mt-16{{ end }}">
+      <div class="grid grid-cols-1 lg:grid-cols-[17.5rem_auto] gap-4">
+        {{/* ── Sidebar ── */}}
+        <aside class="sidebar-wrapper hidden lg:block">
+          <div class="sticky top-4 flex flex-col gap-4">
+            {{ partial "sidebar.html" . }}
+          </div>
+        </aside>
 
-      {{/* ── Content area ── */}}
-      <main class="flex flex-col gap-4 min-w-0">
-        {{ block "main" . }}{{ end }}
-      </main>
+        {{/* ── Content area ── */}}
+        <main class="flex flex-col gap-4 min-w-0">
+          {{ block "main" . }}{{ end }}
+        </main>
+      </div>
     </div>
   </div>
 
@@ -87,6 +90,26 @@
     src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.5.0/browser/overlayscrollbars.browser.es6.min.js"></script>
   {{ $osInit := resources.Get "js/overlayscrollbars-init.js" }}
   <script defer src="{{ $osInit.RelPermalink }}"></script>
+
+  <!-- Swup -->
+  <script src="https://unpkg.com/swup@4"></script>
+  <script src="https://unpkg.com/@swup/head-plugin@2"></script>
+  <script src="https://unpkg.com/@swup/preload-plugin@3"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      window.swup = new Swup({
+        plugins: [
+          new SwupHeadPlugin(),
+          new SwupPreloadPlugin()
+        ]
+      });
+
+      window.swup.hooks.on('page:view', () => {
+        document.dispatchEvent(new Event('kirari:init'));
+      });
+      document.dispatchEvent(new Event('kirari:init'));
+    });
+  </script>
 </body>
 
 </html>

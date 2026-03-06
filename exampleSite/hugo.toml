@@ -1,7 +1,7 @@
 baseURL = "https://el-dorado-7okp.vercel.app/"
 languageCode = "en"
 title = "KIRARI"
-theme = ".."
+theme = "kirari-hugo-theme"
 paginate = 5
 enableRobotsTXT = true
 

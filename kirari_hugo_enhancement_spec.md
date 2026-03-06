@@ -11,8 +11,8 @@
 | **Phase 1** | `F-2` | **图片灯箱** (PhotoSwipe) 沉浸交互 | ✅ Done | ⭐⭐ |
 | **Phase 2** | `F-3` | **极客代码块** (Mac风格顶栏+复制+折叠) | ✅ Done | ⭐⭐⭐ |
 | **Phase 2** | `F-4` | **GitHub 风格提示块** (Admonitions) | P1 (High) | ⭐⭐ |
-| **Phase 3** | `F-5` | **全平台虚拟滚动条** (OverlayScrollbars) | P2 (Medium) | ⭐⭐ |
-| **Phase 3** | `F-6` | **SPA 无缝转场转场** (Swup.js) | P3 (Low) | ⭐⭐⭐⭐⭐ |
+| **Phase 3** | `F-5` | **全平台虚拟滚动条** (OverlayScrollbars) | ✅ Done | ⭐⭐ |
+| **Phase 3** | `F-6` | **SPA 无缝转场转场** (Swup.js) | ✅ Done | ⭐⭐⭐⭐⭐ |
 
 ---
 

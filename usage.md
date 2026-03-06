@@ -113,3 +113,28 @@ Kirari theme includes `OverlayScrollbars` by default to provide a highly polishe
 - **Code Blocks:** Horizontal scrolling within long code blocks is smooth and visually non-intrusive.
 
 There is **no configuration needed** for this feature! It is enabled natively right out of the box, ensuring that Kirari maintains its premium aesthetics without the user needing to set anything up.
+
+## SPA Page Transitions (Swup)
+
+Kirari uses **Swup.js** to provide a seamless, Single Page Application (SPA) experience. When you click a link, the page content fades out and the new content fades in without a full browser refresh. This keeps the global UI state (like your theme settings or music player) persistent.
+
+### Working with Swup
+Since Swup only replaces the content inside the `#swup` container, standard `DOMContentLoaded` events only fire on the initial site load. 
+
+If you are a developer adding custom JavaScript to the theme, you should wrap your initialization logic in a function and listen for the `kirari:init` event:
+
+```javascript
+function myFeatureInit() {
+    // Your initialization code here
+}
+
+// Support both initial load and Swup transitions
+document.addEventListener('DOMContentLoaded', myFeatureInit);
+document.addEventListener('kirari:init', myFeatureInit);
+```
+
+### Key Benefits
+- **No White Flash:** Transitions are smooth and cinematic.
+- **Persistent State:** Widgets, theme settings, and background processes remain active during navigation.
+- **Preloading:** Links are preloaded when hovered, making the site feel instantaneous.
+

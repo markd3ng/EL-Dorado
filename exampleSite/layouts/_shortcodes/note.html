@@ -1,5 +1,0 @@
-{{/* Usage: {{< note type="info" >}}Content here{{< /note >}} */}}
-{{ $type := .Get "type" | default "info" }}
-<div class="note note-{{ $type }} my-4">
-  {{ .Inner | markdownify }}
-</div>

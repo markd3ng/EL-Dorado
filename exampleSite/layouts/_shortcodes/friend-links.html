@@ -1,6 +1,0 @@
-{{/* Usage: {{< friend-links >}} — renders all friends from data/friends.yaml */}}
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
-  {{ range site.Data.friends }}
-    {{ partial "friend-card.html" . }}
-  {{ end }}
-</div>

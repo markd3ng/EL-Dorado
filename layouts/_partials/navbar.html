@@ -4,26 +4,27 @@
     <div class="card-base flex items-center justify-between px-4 h-14 shadow-sm">
 
       {{/* Left: Site title + icon */}}
-      <a href="{{ "/" | relURL }}" class="flex items-center gap-2 btn-plain font-bold text-lg no-underline">
-        {{ partial "icon.html" (dict "name" "home" "class" "w-5 h-5") }}
-        <span class="hidden sm:inline">{{ site.Title }}</span>
+      <a href="{{ .Site.BaseURL }}"
+        class="flex items-center gap-2 font-bold text-xl tracking-tight text-90 transition-transform active:scale-95">
+        {{ partial "icon.html" (dict "name" "home" "class" "w-6 h-6 text-[var(--primary)]") }}
+        {{ .Site.Title }}
       </a>
 
       {{/* Center: Desktop navigation links */}}
       <div class="hidden md:flex items-center gap-1">
         {{ range site.Menus.main }}
-          <a href="{{ .URL }}" class="btn-plain px-3 py-1.5 rounded-lg text-sm font-medium gap-1.5 no-underline
+        <a href="{{ .URL }}" class="btn-plain px-3 py-1.5 rounded-lg text-sm font-medium gap-1.5 no-underline
             hover:bg-[var(--btn-plain-bg-hover)] active:bg-[var(--btn-plain-bg-active)]
-            {{ if $.IsMenuCurrent "main" . }}text-[var(--primary)]{{ end }}"
-            {{ if strings.HasPrefix .URL "http" }}target="_blank" rel="noopener noreferrer"{{ end }}>
-            {{ if .Params.icon }}
-              {{ partial "icon.html" (dict "name" .Params.icon "class" "w-4 h-4") }}
-            {{ end }}
-            {{ .Name }}
-            {{ if strings.HasPrefix .URL "http" }}
-              {{ partial "icon.html" (dict "name" "external-link" "class" "w-3 h-3 opacity-50") }}
-            {{ end }}
-          </a>
+            {{ if $.IsMenuCurrent " main" . }}text-[var(--primary)]{{ end }}" {{ if strings.HasPrefix .URL "http"
+          }}target="_blank" rel="noopener noreferrer" {{ end }}>
+          {{ if .Params.icon }}
+          {{ partial "icon.html" (dict "name" .Params.icon "class" "w-4 h-4") }}
+          {{ end }}
+          {{ .Name }}
+          {{ if strings.HasPrefix .URL "http" }}
+          {{ partial "icon.html" (dict "name" "external-link" "class" "w-3 h-3 opacity-50") }}
+          {{ end }}
+        </a>
         {{ end }}
       </div>
 
@@ -33,44 +34,50 @@
         {{/* Desktop search input */}}
         {{ if site.Params.search.enable | default true }}
         <div class="hidden md:flex items-center relative">
-          <input id="search-input-desktop" type="text"
-            placeholder="{{ i18n "searchPlaceholder" | default "Search..." }}"
-            class="w-40 focus:w-60 transition-all duration-300 h-9 pl-9 pr-3 rounded-lg text-sm
+          <input id="search-input-desktop" type="text" placeholder="{{ i18n " searchPlaceholder" | default "Search..."
+            }}" class="w-40 focus:w-60 transition-all duration-300 h-9 pl-9 pr-3 rounded-lg text-sm
             bg-[var(--btn-regular-bg)] text-75 placeholder:text-50
-            focus:outline-none focus:ring-2 focus:ring-[var(--primary)]/30"
-            autocomplete="off">
+            focus:outline-none focus:ring-2 focus:ring-[var(--primary)]/30" autocomplete="off">
           <span class="absolute left-2.5 top-1/2 -translate-y-1/2 text-50 pointer-events-none">
             {{ partial "icon.html" (dict "name" "search" "class" "w-4 h-4") }}
           </span>
           {{/* Desktop search results dropdown */}}
-          <div id="search-results-desktop" class="absolute top-full mt-2 left-0 right-0 w-80 float-panel p-2 hidden max-h-96 overflow-y-auto">
+          <div id="search-results-desktop"
+            class="absolute top-full mt-2 left-0 right-0 w-80 float-panel p-2 hidden max-h-96 overflow-y-auto">
           </div>
         </div>
         {{ end }}
 
         {{/* Mobile search button */}}
         {{ if site.Params.search.enable | default true }}
-        <button id="btn-search-mobile" class="md:hidden btn-plain w-9 h-9 rounded-lg" aria-label="{{ i18n "search" | default "Search" }}">
+        <button id="btn-search-mobile" class="md:hidden btn-plain w-9 h-9 rounded-lg" aria-label="{{ i18n " search" |
+          default "Search" }}">
           {{ partial "icon.html" (dict "name" "search" "class" "w-5 h-5") }}
         </button>
         {{ end }}
 
         {{/* Palette (hue) button */}}
         {{ if not (site.Params.themeHueFixed | default false) }}
-        <button id="btn-display-settings" class="btn-plain w-9 h-9 rounded-lg" aria-label="{{ i18n "displaySettings" | default "Display settings" }}">
+        <button id="btn-display-settings" class="btn-plain w-9 h-9 rounded-lg" aria-label="{{ i18n " displaySettings" |
+          default "Display settings" }}">
           {{ partial "icon.html" (dict "name" "palette" "class" "w-5 h-5") }}
         </button>
         {{ end }}
 
         {{/* Theme toggle button */}}
-        <button id="btn-theme-toggle" class="btn-plain w-9 h-9 rounded-lg" aria-label="{{ i18n "toggleTheme" | default "Toggle theme" }}" data-theme-mode="auto">
-          <span class="theme-icon theme-icon-light hidden">{{ partial "icon.html" (dict "name" "sun" "class" "w-5 h-5") }}</span>
-          <span class="theme-icon theme-icon-dark hidden">{{ partial "icon.html" (dict "name" "moon" "class" "w-5 h-5") }}</span>
-          <span class="theme-icon theme-icon-auto">{{ partial "icon.html" (dict "name" "monitor" "class" "w-5 h-5") }}</span>
+        <button id="btn-theme-toggle" class="btn-plain w-9 h-9 rounded-lg" aria-label="{{ i18n " toggleTheme" |
+          default "Toggle theme" }}" data-theme-mode="auto">
+          <span class="theme-icon theme-icon-light hidden">{{ partial "icon.html" (dict "name" "sun" "class" "w-5 h-5")
+            }}</span>
+          <span class="theme-icon theme-icon-dark hidden">{{ partial "icon.html" (dict "name" "moon" "class" "w-5 h-5")
+            }}</span>
+          <span class="theme-icon theme-icon-auto">{{ partial "icon.html" (dict "name" "monitor" "class" "w-5 h-5")
+            }}</span>
         </button>
 
         {{/* Mobile menu button */}}
-        <button id="btn-menu-toggle" class="md:hidden btn-plain w-9 h-9 rounded-lg" aria-label="{{ i18n "menu" | default "Menu" }}">
+        <button id="btn-menu-toggle" class="md:hidden btn-plain w-9 h-9 rounded-lg" aria-label="{{ i18n " menu" |
+          default "Menu" }}">
           {{ partial "icon.html" (dict "name" "menu" "class" "w-5 h-5") }}
         </button>
 
