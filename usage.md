@@ -33,3 +33,22 @@ hugo
 You should see an `llms.txt` file generated in your `public/` directory (e.g. `public/llms.txt`). The file contains your site title, description, and an aggregated list of your regular posts with their URL, publication date, description, and plain text content. 
 
 This file will now be available under your root domain (e.g., `https://yoursite.com/llms.txt`), providing LLM crawlers direct access to your well-structured content!
+
+## Smooth Image Lightbox (PhotoSwipe)
+
+The Kirari theme integrates **PhotoSwipe** for a seamless, immersive image viewing experience directly within your blog posts.
+
+### How to use
+
+There is **no configuration needed**! The feature is enabled by default. 
+
+Whenever you insert a standard Markdown image into your posts:
+
+```markdown
+![My awesome image](/images/awesome-photo.jpg)
+```
+
+The theme will automatically wrap the image with PhotoSwipe functionality. When users click on the image in a post, it will smoothly zoom into a full-screen, gesture-supported lightbox equipped with an immersive dark overlay.
+
+- Images are optimally scaled but maintain natural aspect ratios.
+- The lightbox automatically adapts to mobile constraints with swipe-to-close capabilities.

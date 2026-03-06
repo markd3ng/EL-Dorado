@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language.Lang }}" class="{{ if eq (site.Params.defaultTheme | default "auto") "dark" }}dark{{ end }}">
+<html lang="{{ .Site.Language.Lang }}" class="{{ if eq (site.Params.defaultTheme | default " auto") "dark" }}dark{{ end
+  }}">
+
 <head>
   {{- partial "head.html" . -}}
   {{- partial "css.html" . -}}
   <!-- Theme init (prevent FOUC) -->
   <script>
-    ;(function(){
+    ; (function () {
       var s = localStorage.getItem('kirari-theme-mode');
       if (s === 'dark' || (!s && window.matchMedia('(prefers-color-scheme:dark)').matches)) {
         document.documentElement.classList.add('dark');
@@ -17,6 +19,7 @@
     })();
   </script>
 </head>
+
 <body class="min-h-screen bg-[var(--page-bg)] transition-colors duration-300">
 
   {{/* ── Navbar ── */}}
@@ -29,12 +32,14 @@
 
   {{/* ── Banner ── */}}
   {{ $isHome := .IsHome }}
-  <div id="banner-wrapper" class="relative w-full overflow-hidden {{ if $isHome }}h-[var(--banner-height-home)]{{ else }}h-[var(--banner-height)]{{ end }} transition-[height] duration-500">
+  <div id="banner-wrapper"
+    class="relative w-full overflow-hidden {{ if $isHome }}h-[var(--banner-height-home)]{{ else }}h-[var(--banner-height)]{{ end }} transition-[height] duration-500">
     {{ partial "banner.html" . }}
   </div>
 
   {{/* ── Main grid ── */}}
-  <div class="relative w-full max-w-[var(--page-width)] mx-auto px-4 {{ if $isHome }}-mt-[8vh]{{ else }}-mt-16{{ end }}">
+  <div
+    class="relative w-full max-w-[var(--page-width)] mx-auto px-4 {{ if $isHome }}-mt-[8vh]{{ else }}-mt-16{{ end }}">
     <div class="grid grid-cols-1 lg:grid-cols-[17.5rem_auto] gap-4">
       {{/* ── Sidebar ── */}}
       <aside class="sidebar-wrapper hidden lg:block">
@@ -65,13 +70,16 @@
   <script defer src="{{ $navbar.RelPermalink }}" integrity="{{ $navbar.Data.Integrity }}"></script>
   <script defer src="{{ $scrollUtils.RelPermalink }}" integrity="{{ $scrollUtils.Data.Integrity }}"></script>
   <script defer src="{{ $sidebarCollapse.RelPermalink }}" integrity="{{ $sidebarCollapse.Data.Integrity }}"></script>
+  {{ $photoswipeInit := resources.Get "js/photoswipe-init.js" }}
+  <script type="module" src="{{ $photoswipeInit.RelPermalink }}"></script>
   {{ if and (site.Params.search.enable | default true) }}
-    {{ $search := resources.Get "js/search.js" | minify | fingerprint }}
-    <script defer src="{{ $search.RelPermalink }}" integrity="{{ $search.Data.Integrity }}"></script>
+  {{ $search := resources.Get "js/search.js" | minify | fingerprint }}
+  <script defer src="{{ $search.RelPermalink }}" integrity="{{ $search.Data.Integrity }}"></script>
   {{ end }}
   {{ if .IsPage }}
-    {{ $toc := resources.Get "js/toc.js" | minify | fingerprint }}
-    <script defer src="{{ $toc.RelPermalink }}" integrity="{{ $toc.Data.Integrity }}"></script>
+  {{ $toc := resources.Get "js/toc.js" | minify | fingerprint }}
+  <script defer src="{{ $toc.RelPermalink }}" integrity="{{ $toc.Data.Integrity }}"></script>
   {{ end }}
 </body>
+
 </html>

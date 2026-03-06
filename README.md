@@ -10,6 +10,7 @@ A beautiful, modern Hugo theme inspired by [Kirari](https://github.com/markd3ng/
 - Dark / Light / Auto theme switching
 - Fully responsive layout
 - Full-text search with Pagefind
+- Smooth Image Lightbox (PhotoSwipe)
 - Table of Contents with scroll highlighting
 - Categories and Tags taxonomy
 - Archive page with timeline view

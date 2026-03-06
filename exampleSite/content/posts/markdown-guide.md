@@ -93,7 +93,7 @@ This is [an example](http://example.com/ "Title") inline link.
 
 ### Image
 
-![Alt text](/images/placeholder.jpg "Image title")
+![Alt text](https://images.unsplash.com/photo-1506744626753-dfdf8046048d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80 "Image title")
 
 ### Emphasis
 
