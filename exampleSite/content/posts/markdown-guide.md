@@ -34,6 +34,18 @@ The blockquote element represents content that is quoted from another source.
 
 > Tiam, ad mint andance am magna lacus faciluetro accumsan laoreet. Aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
 
+> [!NOTE]
+> This is a note admonition.
+
+> [!TIP]
+> This is a tip admonition.
+
+> [!WARNING]
+> This is a warning admonition.
+
+> [!IMPORTANT]
+> This is an important admonition.
+
 ## Tables
 
 | Name  | Age | City     |
