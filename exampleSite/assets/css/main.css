@@ -309,7 +309,21 @@ body {
 
 .prose pre {
   border-radius: var(--radius-large);
-  border: 1px solid var(--line-color);
+  border: none !important;
+  background-color: #282c34 !important;
+  padding: 1rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.prose .highlight {
+  border-radius: var(--radius-large);
+  overflow: hidden;
+  background-color: #282c34;
+  margin: 1.5em 0;
+}
+
+.prose .highlight pre {
+  margin: 0 !important;
 }
 
 .prose blockquote {

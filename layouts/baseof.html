@@ -70,8 +70,7 @@
   <script defer src="{{ $navbar.RelPermalink }}" integrity="{{ $navbar.Data.Integrity }}"></script>
   <script defer src="{{ $scrollUtils.RelPermalink }}" integrity="{{ $scrollUtils.Data.Integrity }}"></script>
   <script defer src="{{ $sidebarCollapse.RelPermalink }}" integrity="{{ $sidebarCollapse.Data.Integrity }}"></script>
-  {{ $clipboard := resources.Get "js/clipboard.js" | minify | fingerprint }}
-  <script defer src="{{ $clipboard.RelPermalink }}" integrity="{{ $clipboard.Data.Integrity }}"></script>
+
   {{ $photoswipeInit := resources.Get "js/photoswipe-init.js" }}
   <script type="module" src="{{ $photoswipeInit.RelPermalink }}"></script>
   {{ if and (site.Params.search.enable | default true) }}

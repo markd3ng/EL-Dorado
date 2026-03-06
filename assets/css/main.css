@@ -309,33 +309,21 @@ body {
 
 .prose pre {
   border-radius: var(--radius-large);
-  border: 1px solid var(--line-color);
+  border: none !important;
+  background-color: #282c34 !important;
+  padding: 1rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
 }
 
-.prose .code-block {
-  background-color: #282c34 !important;
-  border: none !important;
+.prose .highlight {
   border-radius: var(--radius-large);
   overflow: hidden;
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  background-color: #282c34;
+  margin: 1.5em 0;
 }
 
-.code-expand-gradient {
-  background-image: linear-gradient(to top, #282c34 20%, transparent);
-}
-
-.prose .code-block pre {
-  margin: 0;
-  border: none;
-  border-radius: 0;
-  background-color: transparent !important;
-  padding-top: 0 !important;
-  padding-bottom: 1rem !important;
-}
-
-.prose .code-block .highlight {
-  margin: 0;
-  background-color: transparent !important;
+.prose .highlight pre {
+  margin: 0 !important;
 }
 
 .prose blockquote {
