@@ -312,6 +312,17 @@ body {
   border: 1px solid var(--line-color);
 }
 
+.prose .code-block pre {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  background-color: transparent !important;
+}
+
+.prose .code-block .highlight {
+  margin: 0;
+}
+
 .prose blockquote {
   border-left-color: var(--primary);
   font-style: normal;

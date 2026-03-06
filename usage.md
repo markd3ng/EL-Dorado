@@ -52,3 +52,20 @@ The theme will automatically wrap the image with PhotoSwipe functionality. When 
 
 - Images are optimally scaled but maintain natural aspect ratios.
 - The lightbox automatically adapts to mobile constraints with swipe-to-close capabilities.
+
+## Mac-Style Geek Code Blocks
+
+The Kirari theme completely revamps default Hugo code blocks to provide a more functional and aesthetically pleasing experience. 
+
+### Features Include:
+- **Mac-style Controls**: Added red, yellow, and green window buttons to the top-left of each code block.
+- **Language & Title display**: At the top bar, you will see the language (e.g. `html` or `ts`) or custom title of the code block.
+- **One-click Copy**: Hovering over the code block reveals a sleek copy-to-clipboard button. When clicked, it copies the code and transforms into a green checkmark to confirm success.
+- **Smart Expand/Collapse**: Super-long code blocks are automatically constrained in height to maintain a clean reading experience, fading into a gradient. Users can simply click the "Expand" button to reveal the whole snippet without needing to scroll endlessly.
+
+### How to use
+As long as you use standard Markdown syntax (optionally providing a language identifier) in your `posts/` content, the new engine handles the UI natively:
+
+` ```html `
+` <div>Hello World</div> `
+` ``` `
