@@ -18,14 +18,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Show check mark
                 const iconCopy = btn.querySelector('.icon-copy');
                 const iconCheck = btn.querySelector('.icon-check');
+                const copyText = btn.querySelector('.copy-text');
 
                 if (iconCopy && iconCheck) {
                     iconCopy.classList.add('hidden');
                     iconCheck.classList.remove('hidden');
+                    if (copyText) copyText.textContent = 'Copied!';
 
                     setTimeout(() => {
                         iconCopy.classList.remove('hidden');
                         iconCheck.classList.add('hidden');
+                        if (copyText) copyText.textContent = 'Copy';
                     }, 2000);
                 }
             } catch (err) {
