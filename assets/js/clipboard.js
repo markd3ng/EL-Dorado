@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Collapse
                 block.classList.remove('is-expanded');
                 scrollable.style.maxHeight = '';
-                expandBtn.classList.add('bg-gradient-to-t', 'from-[var(--codeblock-bg)]', 'to-transparent', 'pt-16');
+                expandBtn.classList.add('code-expand-gradient', 'pt-16');
                 expandBtn.classList.remove('pb-4');
                 expandBtn.classList.add('pb-2');
 
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 scrollable.style.maxHeight = `${scrollable.scrollHeight}px`;
 
                 // Remove gradient for collapse button
-                expandBtn.classList.remove('bg-gradient-to-t', 'from-[var(--codeblock-bg)]', 'to-transparent', 'pt-16');
+                expandBtn.classList.remove('code-expand-gradient', 'pt-16');
                 expandBtn.classList.remove('pb-2');
                 expandBtn.classList.add('pb-4');
 
