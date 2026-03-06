@@ -18,6 +18,7 @@ A beautiful, modern Hugo theme inspired by [Kirari](https://github.com/markd3ng/
 - i18n support (English, Chinese, Japanese)
 - Tailwind CSS v4 integration
 - Hugo v0.146+ new template system
+- AI-friendly content generation (`llms.txt` support)
 
 ## Requirements
 
@@ -170,6 +171,10 @@ Types: `info`, `warning`, `danger`, `tip`
 ```markdown
 {{</* friend-links */>}}
 ```
+
+## Usage Guide
+
+For more advanced features and detailed usage instructions, such as enabling `llms.txt` generation, please refer to our [Usage Guide](usage.md).
 
 ## Development
 
