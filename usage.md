@@ -102,3 +102,14 @@ If you do NOT include a designator, it will render as a standard, elegant blockq
 ```markdown
 > This is a standard blockquote without an admonition title.
 ```
+
+## Virtual OverlayScrollbars
+
+Kirari theme includes `OverlayScrollbars` by default to provide a highly polished, aesthetic scrolling experience across all operating systems. Thick native browser scrollbars (especially on Windows) are automatically replaced by thin, custom, auto-hiding scrollbars.
+
+### Where it applies:
+- **Global Page Scrollbar:** Replaces the main window scrollbar.
+- **Table of Contents (TOC):** Ensures the sidebar TOC stays sleek when its content exceeds window height.
+- **Code Blocks:** Horizontal scrolling within long code blocks is smooth and visually non-intrusive.
+
+There is **no configuration needed** for this feature! It is enabled natively right out of the box, ensuring that Kirari maintains its premium aesthetics without the user needing to set anything up.

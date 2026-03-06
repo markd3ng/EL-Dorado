@@ -13,6 +13,7 @@ A beautiful, modern Hugo theme inspired by [Kirari](https://github.com/markd3ng/
 - Smooth Image Lightbox (PhotoSwipe)
 - Mac-style Geek Code Blocks (Expandable, One-click Copy)
 - Table of Contents with scroll highlighting
+- Virtual OverlayScrollbars for sleek scrolling
 - Categories and Tags taxonomy
 - Archive page with timeline view
 - Friends page for blogroll
