@@ -69,3 +69,36 @@ As long as you use standard Markdown syntax (optionally providing a language ide
 ` ```html `
 ` <div>Hello World</div> `
 ` ``` `
+
+## GitHub-Style Admonitions
+
+The Kirari theme now natively supports GitHub-style admonitions using standard Markdown blockquotes. This allows you to easily create highlighted callout boxes for notes, warnings, quotes, and more, without needing shortcodes.
+
+### How to use
+
+Start a blockquote with a specific designator `[!TYPE]` on the first line. The theme will automatically render it as a styled card with an appropriate icon and color.
+
+Supported types are:
+- `[!NOTE]` (Default blue info style)
+- `[!TIP]` (Green success style)
+- `[!IMPORTANT]` (Orange warning style)
+- `[!WARNING]` (Orange warning style)
+- `[!CAUTION]` (Red danger style)
+
+**Example:**
+
+```markdown
+> [!NOTE]
+> This is a helpful note that provides extra context to the reader.
+```
+
+```markdown
+> [!WARNING]
+> Please be careful when executing this command!
+```
+
+If you do NOT include a designator, it will render as a standard, elegant blockquote:
+
+```markdown
+> This is a standard blockquote without an admonition title.
+```
